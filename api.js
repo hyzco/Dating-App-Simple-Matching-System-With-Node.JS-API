@@ -23,7 +23,6 @@ app.post('/api/setNewMatch/',function(req,res){
 			}
 			else{
 				var addMatchesFiled = firestore.collection('Matches').doc(_uid).set(data);
-				//	console.log("you've sent cathing request");
 					isMatch(_uid,_targetUid);
 				    res.end();
 			}
